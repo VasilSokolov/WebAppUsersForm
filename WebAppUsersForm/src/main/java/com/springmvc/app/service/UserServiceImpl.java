@@ -22,8 +22,7 @@ public class UserServiceImpl implements UserService{
 		users.add(new User(counter.incrementAndGet(), "pesho", "pesho@abv.bg", UserCountry.BULGARIA));
 		users.add(new User(counter.incrementAndGet(), "abella", "abella@abv.bg", UserCountry.FRANCE));
 		users.add(new User(counter.incrementAndGet(), "gosho", "gosho@abv.bg", UserCountry.GERMANY));
-		users.add(new User(counter.incrementAndGet(), "maria91", "maria@abv.bg", UserCountry.ITALY));
-		
+		users.add(new User(counter.incrementAndGet(), "maria91", "maria@abv.bg", UserCountry.ITALY));		
 	}	
 	
 	@Override

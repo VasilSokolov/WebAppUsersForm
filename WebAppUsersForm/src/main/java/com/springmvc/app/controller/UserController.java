@@ -1,6 +1,11 @@
 package com.springmvc.app.controller;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -38,17 +43,18 @@ public class UserController {
 	//-------------------Create a User--------------------------------------------------------
     
     @RequestMapping(value = "/createUser/", method = RequestMethod.POST)
-    public ResponseEntity<Void> createUser(@RequestBody User user,    UriComponentsBuilder ucBuilder) {
-        System.out.println("Creating User " + user.getUserName());
+    public ResponseEntity<Void> createUser(@RequestBody User user,    UriComponentsBuilder ucBuilder) throws URISyntaxException {
+//        System.out.println("Creating User " + user.getUserName());
         
         if (user.getUserName().isEmpty()) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
  
         userService.createUser(user);
- 
+        
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri());
+    
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
     

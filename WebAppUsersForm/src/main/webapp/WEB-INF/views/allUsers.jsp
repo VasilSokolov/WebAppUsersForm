@@ -16,7 +16,7 @@
 			</div>
 		</div>
     </nav>
-	<div class="generic-container" ng-controller="UserController as ctrl">
+	<div class="jumbotron" ng-controller="UserController as ctrl">
 		<div class="panel panel-default">
 			<!-- Default panel contents -->
 			<div class="panel-heading">
