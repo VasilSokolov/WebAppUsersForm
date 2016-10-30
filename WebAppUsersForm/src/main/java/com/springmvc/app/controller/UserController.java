@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springmvc.app.model.User;
 import com.springmvc.app.service.UserService;
 
-@RestController(value = "/users")
+@RestController
 public class UserController {
 	
 	@Autowired
@@ -20,14 +20,14 @@ public class UserController {
 	
 	//-------------------Retrieve All Users--------------------------------------------------------
 	
-	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<User>> listAllAuthors(){
-		List<User> authors = userService.listAllUsers();
-		if (authors.isEmpty()) {
+	@RequestMapping(value = "/allusers", method = RequestMethod.GET)
+	public ResponseEntity<List<User>> listAllUsers(){
+		List<User> users = userService.listAllUsers();
+		if (users.isEmpty()) {
 			
 			//You many decide to return HttpStatus.NOT_FOUND
 			return new ResponseEntity<List<User>>(HttpStatus.NOT_FOUND);
 		}
-		return new ResponseEntity<List<User>>(authors, HttpStatus.OK);
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 	}
 }

@@ -2,11 +2,13 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>User form</title>
 </head>
 <body>
 <h1>
-	Hello world!  
+	Welcome on front page!  
 </h1>
+<body >
+	<a href="users">List of Users</a>
 </body>
 </html>
