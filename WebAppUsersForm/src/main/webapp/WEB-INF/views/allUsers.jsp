@@ -6,9 +6,15 @@
 	<title>LIst of all Users</title>
 </head>
 
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <body ng-app="myApp" class="ng-cloak">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">        
+				<a class="navbar-brand" href="./" style="color: red">Home</a>
+			</div>
+		</div>
+    </nav>
 	<div class="generic-container" ng-controller="UserController as ctrl">
 		<div class="panel panel-default">
 			<!-- Default panel contents -->
@@ -20,8 +26,8 @@
 					<thead>
 						<tr>
 							<th>ID.</th>
-							<th>First Name</th>
-							<th>Last Name</th>
+							<th>User Name</th>
+							<th>Email</th>
 							<th>Country</th>
 							<th width="20%"></th>
 						</tr>

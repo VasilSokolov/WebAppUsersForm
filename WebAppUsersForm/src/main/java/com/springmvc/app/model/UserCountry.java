@@ -2,26 +2,21 @@ package com.springmvc.app.model;
 
 public enum UserCountry {
 	
-	BULGARIA,
-	ITALY,
-	FRANCE,
-	GERMANY
+	BULGARIA("Bulgaria"),
+	ITALY("Italy"),
+	FRANCE("France"),
+	GERMANY("Germany");
 	
-//	BULGARIA("Bulgaria"),
-//	ITALY("Italy"),
-//	FRANCE("France"),
-//	GERMANY("Germany");
+	private String countryName;
+
+	private UserCountry(String countryName) {
+		this.countryName = countryName;
+	}
 	
-//	private String countryName;
-//
-//	private UserCountry(String countryName) {
-//		this.countryName = countryName;
-//	}
-//	
-//	/**
-//	 * @return the countryName
-//	 */
-//	public String getCountryName() {
-//		return countryName;
-//	}
+	/**
+	 * @return the countryName
+	 */
+	public String getCountryName() {
+		return countryName;
+	}
 }
