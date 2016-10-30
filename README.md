@@ -1,7 +1,7 @@
 # WebAppUsersForm
 Simple Web App of UsersForm
 
-  It will be created on 4 user storys.
+  It will be created on 4 user stories.
   
   1.Configurate and create back-end part.
   2.Configurate and create REST services bethween back-end and front-end.
