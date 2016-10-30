@@ -51,7 +51,6 @@ angular.module('myApp').controller('UserController', ['$scope', 'UserService', f
             updateUser(self.user, self.user.id);
             console.log('User updated with id ', self.user.id);
         }
-        reset();
     }
 
     function remove(id){

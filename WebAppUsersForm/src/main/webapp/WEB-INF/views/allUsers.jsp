@@ -12,6 +12,7 @@
 		<div class="container">
 			<div class="navbar-header">        
 				<a class="navbar-brand" href="./" style="color: red">Home</a>
+				<a class="navbar-brand" href="create" style="color: red">Create User</a>
 			</div>
 		</div>
     </nav>
@@ -38,7 +39,10 @@
 							<td><span ng-bind="u.userName"></span></td>
 							<td><span ng-bind="u.email"></span></td>
 							<td><span ng-bind="u.country"></span></td>
-						</tr>
+							<td>
+							<button type="button" ng-click="ctrl.remove(u.id)" class="btn btn-danger custom-width">Remove</button>
+                         	</td>
+                         </tr>
 					</tbody>
 				</table>
 			</div>

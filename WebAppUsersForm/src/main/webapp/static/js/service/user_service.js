@@ -2,8 +2,9 @@
 
 angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $q){
 
-    var REST_SERVICE_URI = 'http://localhost:8080/WebAppUsersForm/allusers/';
-
+    var REST_SERVICE_URI = 'http://localhost:8080/WebAppUsersForm/user/';
+    var REST_CREATE_USER_SERVICE_URI = 'http://localhost:8080/WebAppUsersForm/createUser/';
+    
     var factory = {
         fetchAllUsers: fetchAllUsers,
         createUser: createUser,
@@ -29,7 +30,7 @@ angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $
 
     function createUser(user) {
         var deferred = $q.defer();
-        $http.post(REST_SERVICE_URI, user)
+        $http.post(REST_CREATE_USER_SERVICE_URI, user)
             .then(
             function (response) {
                 deferred.resolve(response.data);
