@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.springmvc.app.model.User;
 import com.springmvc.app.model.UserCountry;
 
+@Service
 public class UserServiceImpl implements UserService{
 	
 	// Dummy database. Initialize users with some dummy values.
