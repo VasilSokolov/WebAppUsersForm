@@ -18,7 +18,7 @@
 	<div class="jumbotron" ng-controller="UserController as ctrl" class="row">
     	 <div class="panel-heading"><span class="row">User Registration Form </span></div>
          <div  class="col-lg-8">
-             <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+             <form ng-submit="ctrl.submit()" name="myForm" id="form" class="form-horizontal">
                  <input type="hidden" ng-model="ctrl.user.id" />
                  <div class="row">
                      <div class="form-group col-md-12">
@@ -63,8 +63,8 @@
 
                  <div class="row">
                      <div class="form-actions rigth">
-                         <input type="submit"  value="Create User" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid"> 
-                     </div>
+						<input type="submit"  value="Create User" class="btn btn-primary btn-sm" ng-disabled="myForm.$invalid">  
+					</div>
                  </div>
              </form>
     	</div>

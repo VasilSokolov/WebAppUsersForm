@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="navbar-header">        
 				<a class="navbar-brand" href="./" style="color: red">Home</a>
-				<a class="navbar-brand" href="create" style="color: red">Create User</a>
+				<a class="navbar-brand" href="createUser" style="color: red">Create User</a>
 			</div>
 		</div>
     </nav>
