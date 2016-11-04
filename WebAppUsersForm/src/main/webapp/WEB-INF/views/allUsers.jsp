@@ -36,7 +36,7 @@
 					<tbody>
 						<tr ng-repeat="u in ctrl.users">
 							<td><span ng-bind="u.id"></span></td>
-							<td><span ng-bind="u.userName"></span></td>
+							<td><span ng-bind="u.username"></span></td>
 							<td><span ng-bind="u.email"></span></td>
 							<td><span ng-bind="u.country"></span></td>
 							<td>
