@@ -3,15 +3,15 @@ package com.springmvc.app.model;
 public class User {
 
 	private Long id;
-	private String userName;
+	private String username;
 	private String email;
 	private UserCountry country;
 
 	public User() {}
 
-	public User(Long id, String userName, String email, UserCountry country) {
+	public User(Long id, String username, String email, UserCountry country) {
 		this.id = id;
-		this.userName = userName;
+		this.username = username;
 		this.email = email;
 		this.country = country;
 	}
@@ -32,18 +32,18 @@ public class User {
 	}
 
 	/**
-	 * @return the userName
+	 * @return the username
 	 */
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
 	/**
-	 * @param userName
-	 *            the userName to set
+	 * @param username
+	 *            the username to set
 	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", email=" + email + ", country=" + country + "]";
+		return "User [id=" + id + ", username=" + username + ", email=" + email + ", country=" + country + "]";
 	}
 
 }

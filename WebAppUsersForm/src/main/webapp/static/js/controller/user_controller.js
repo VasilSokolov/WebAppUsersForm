@@ -2,7 +2,7 @@
 
 angular.module('myApp').controller('UserController', ['$scope', 'UserService', '$window', function($scope, UserService, $window) {
     var self = this;
-    self.user={id:null,userName:'',email:'',country:''};
+    self.user={id:null,username:'',email:'',country:''};
     self.users=[];
 
     self.submit = submit;
@@ -55,10 +55,10 @@ angular.module('myApp').controller('UserController', ['$scope', 'UserService', '
 
     function remove(id){
         console.log('id to be deleted', id);
-        if(self.user.id === id) {//clean form if the user to be deleted is shown there.
+        //clean form if the user to be deleted is shown there.
+        if(self.user.id === id) {
             reset();
         }
         deleteUser(id);
     }
-
 }]);
